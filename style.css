@@ -1,0 +1,351 @@
+/*追尾*/
+
+#background-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(1px); 
+}
+
+.cover{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    height: 3000px;
+    width: 300px;
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.4); /* 枠線をさりげなく指定 */
+    border-right-color: rgba(255, 255, 255, 0.2); /* 枠線の色をさりげなく指定 */
+    border-bottom-color: rgba(255, 255, 255, 0.2);  /* 枠線の色をさりげなく指定 */
+}
+
+@media (width > 375px){
+    .cover{
+        width: 1000px;
+    }
+}
+
+body{
+    margin: auto;
+}
+/*全てのセクションを中央に定義*/
+section{
+    display: block;
+    width: 300px;
+    margin: 30px auto;
+}
+@media (width > 375px){
+    section{
+        width: 1000px;
+        margin: 80px auto;
+    }
+}
+/*ヒーローセクション*/
+.hero {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0;
+    height: 450px;
+    position: relative;
+}
+@media (width > 375px){
+    .hero {
+        height: 550px;
+    }
+}
+
+.trimBlock1,.trimBlock2, .trimBlock3, .trimBlock4, .trimBlockSub1, .trimBlockSub2, .trimBlockSub3, .trimBlockSub4, .trimBlockSub5, .trimBlockSub6, .trimBlockSub7, .trimBlockSub8{
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    display: block;
+    position: absolute;
+}
+
+.trimBlock1, .trimBlock2, .trimBlockSub1, .trimBlockSub2{
+    top: 0%;
+}
+
+.trimBlock1, .trimBlock3, .trimBlockSub3, .trimBlockSub4{
+    left: 0%;
+}
+
+.trimBlock3, .trimBlock4, .trimBlockSub7, .trimBlockSub8{
+    bottom: 0%;
+}
+
+.trimBlock2, .trimBlock4, .trimBlockSub5, .trimBlockSub6{
+    right: 0%;
+}
+
+.trimBlockSub1, .trimBlockSub7{
+    left: 12px;
+}
+
+.trimBlockSub2, .trimBlockSub8{
+    right: 12px;
+}
+
+.trimBlockSub3, .trimBlockSub5{
+    top: 12px;
+}
+
+.trimBlockSub4, .trimBlockSub6{
+    bottom: 12px;
+}
+
+.studentName, .studentInfo{
+    position: absolute;
+    right: 24px;
+    text-align: right;
+}
+
+.studentName{
+    font-size: 25pt;
+    bottom: 100px;
+}
+
+@media (width > 375px){
+    .studentName{
+        font-size: 45pt;
+    }
+}
+
+.studentInfo{
+    font-size: 13pt;
+    line-height: 5px;
+    font-weight: normal;
+    bottom: 50px;
+}
+
+@media (width > 375px){
+    .studentInfo{
+        font-size: 23pt;
+    }
+}
+
+/*スキルセクション*/
+
+.skillTitle{
+    margin-bottom: 30px;
+    font-size: 15pt;
+    text-decoration: underline;
+}
+
+.skillContents{
+    background: linear-gradient(to right, rgb(216, 255, 255), white, rgb(216, 255, 255));
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
+}
+
+.skillContents h1{
+    position: absolute;
+    top: -30%;
+    font-size: 28pt;
+}
+
+.skillContents p{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    font-size: 15pt;
+    padding: 0;
+    margin: 0;
+}
+
+.skillContents img{
+    width: 100%;
+    clip-path: inset(20px 0 50px 0);
+    padding: 0;
+    margin: 0;
+}
+
+.triangle1, .triangle2{
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 30px solid rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+
+.triangle1{
+    transform: rotate(-90deg);
+    left: -21%;
+}
+.triangle2{
+    transform: rotate(90deg);
+    right: -21%;
+}
+@media (width <= 375px){
+    .skillContentsPC{
+        display: none;
+    }
+}
+
+@media (width > 375px){
+    .skillContents{
+        display: none;
+    }
+
+    .skillTitle{
+        display: none;
+    }
+}
+
+.skillContentsPC{
+    height: 500px;
+    margin: 0 12px;
+    position: relative;
+}
+
+.PCskill1, .PCskill2, .PCskill3, .PCskill4{
+    background: linear-gradient(to right, rgb(216, 255, 255), white, rgb(216, 255, 255));
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 0;
+    position: absolute;
+}
+
+.PCskill1 img, .PCskill2 img, .PCskill3 img, .PCskill4 img{
+    width: 100%;
+    clip-path: inset(20px 0 50px 0);
+    padding: 0;
+    margin: 0;
+}
+
+.PCskill1 h1, .PCskill2 h1, .PCskill3 h1, .PCskill4 h1{
+    position: absolute;
+    top: -30%;
+    font-size: 28pt;
+}
+
+.PCskill1 p, .PCskill2 p, .PCskill3 p, .PCskill4 p{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    font-size: 15pt;
+    padding: 0;
+    margin: 0;
+}
+
+.PCskill1 p:hover, .PCskill2 p:hover, .PCskill3 p:hover, .PCskill4 p:hover{
+    transform: scale(1.25);
+}
+
+.PCskill1 h2, .PCskill2 h2, .PCskill3 h2, .PCskill4 h2{
+    position: absolute;
+    top: -16%;
+    right: -10%;
+    transform: rotate(12deg);
+    z-index:3;
+    font-size: 20pt;
+    color: black;
+    text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black; /* 白と黒の縁取りと影を設定する */
+}
+
+.PCskill1, .PCskill2{
+    top: 0%;
+}
+
+.PCskill3, .PCskill4{
+    bottom: 0%;
+}
+
+.PCskill2, .PCskill4{
+    right: 0%;
+}
+
+.PCskillCenter{
+    background: linear-gradient(to right, rgb(216, 255, 255), white, rgb(216, 255, 255));
+    display: block;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+}
+
+.PCskillCenter h1{
+    text-align: center;
+}
+
+.connectionLine1, .connectionLine2{
+    display: block;
+    background-color: gray;
+    border: 2px solid black;
+    height: 20px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    z-index: -1;
+}
+
+.connectionLine1{
+    transform: rotate(30deg);
+}
+
+.connectionLine2{
+    transform: rotate(-30deg);
+}
+
+/*スキルの詳細*/
+
+.ex1, .ex2, .ex3, .ex4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title{
+    display: flex;
+}
+
+.title > h1{
+    margin-right: 10px;
+}
+
+
+.ex1 img, .ex2 img, .ex3 img, .ex4 img{
+    width: 95%;
+    margin-left: 8px;
+}
+
+@media (width > 375px){
+    .ex1 img, .ex2 img, .ex3 img, .ex4 img{
+        width: 45%;
+        margin-right: 40px;
+        margin-left: 12px;
+    }
+}
+
+@media (width > 375px){
+    .exSkill{
+        display: flex;
+    }
+}
+
+.ex1 .skillText, .ex2 .skillText, .ex3 .skillText, .ex4 .skillText{
+    margin: 5px 8px;
+    margin-bottom: 10px;
+    font-size: 15pt;
+}
+
+.lang, .active{
+    font-size: 15pt;
+}
