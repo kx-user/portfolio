@@ -10,6 +10,7 @@
     object-fit: cover;
     background-attachment: fixed;
     backdrop-filter: blur(1px); 
+    
 }
 
 .cover{
@@ -362,7 +363,7 @@ section{
         z-index: 3;
         color: black;
         font-weight: bold;
-        font-size: 20pt;
+        font-size: 18pt;
         background-color: skyblue;
         padding: 2px 28px;
         text-align: center;
@@ -417,10 +418,3 @@ footer h2{
 footer p{
     font-size: 8pt;
 }
-
-
-
-
-
-
-
