@@ -18,7 +18,8 @@
     z-index: -1;
     height: 3000px;
     width: 300px;
-    backdrop-filter: blur(8px); 
+    /*backdrop-filter: blur(8px); */
+    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.4); /* 枠線をさりげなく指定 */
     border-right-color: rgba(255, 255, 255, 0.2); /* 枠線の色をさりげなく指定 */
     border-bottom-color: rgba(255, 255, 255, 0.2);  /* 枠線の色をさりげなく指定 */
@@ -323,9 +324,55 @@ section{
 }
 
 
+
+
 .ex1 img, .ex2 img, .ex3 img, .ex4 img{
     width: 95%;
     margin-left: 8px;
+}
+
+.ex3 a{
+    position: absolute;
+    left: 38%;
+    top: 324%;
+    text-decoration: none;
+}
+
+.ex3 a p{
+    z-index: 3;
+    color: black;
+    font-weight: bold;
+    font-size: 15pt;
+    background-color: skyblue;
+    padding: 2px 18px;
+    text-align: center;
+    border-radius: 50px;
+    border: solid black;
+}
+
+@media (min-width:768px){
+    .ex3 a{
+        position: absolute;
+        left: 23.5%;
+        top: 334%;
+        text-decoration: none;
+    }
+
+    .ex3 a p{
+        z-index: 3;
+        color: black;
+        font-weight: bold;
+        font-size: 20pt;
+        background-color: skyblue;
+        padding: 2px 28px;
+        text-align: center;
+        border-radius: 50px;
+        border: solid black;
+    }
+
+    .ex3 a p:hover{
+        transform: scale(1.02);
+    }
 }
 
 @media (min-width:768px){
@@ -351,3 +398,29 @@ section{
 .lang, .active{
     font-size: 15pt;
 }
+
+footer{
+    background-color: black;
+    padding: 40px 0;
+}
+
+footer h2, footer p{
+    color: white;
+    text-align: center;
+    line-height: 2px;
+}
+
+footer h2{
+    font-size: 10pt;
+}
+
+footer p{
+    font-size: 8pt;
+}
+
+
+
+
+
+
+

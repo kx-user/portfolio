@@ -1,6 +1,22 @@
 let skillMenu = 8;
 let skillNumber = document.getElementsByClassName('number');
 
+
+window.addEventListener('load', function() {
+    const agent = window.navigator.userAgent.toLowerCase()
+
+    if (agent.indexOf("chrome") != -1) {
+        const coverElement = document.querySelector('.cover');
+        console.log("ブラウザはchromeです。")
+        coverElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        coverElement.style.backdropFilter = 'blur(10px)';
+    } else if (agent.indexOf("safari") != -1) {
+        console.log("ブラウザはsafariです。")
+        coverElement.style.backgroundColor = 'white';
+        coverElement.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))'
+    }
+});
+
 //要素が画面に表示された時に実行する
 document.addEventListener('DOMContentLoaded', function() {
 const targetPCskill1 = document.querySelector('.PCskill1');
@@ -154,4 +170,12 @@ function srcollAuto(element){  //element（ここではクラス）に基づい�
   
     scroll();
 }
-  
+
+
+
+
+
+
+
+
+

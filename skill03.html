@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex,nofollow">
+    <title>映像製作</title>
+    <link rel="stylesheet" href="styleSkill03.css">
+</head>
+<body>
+    <a href="index.html" class="backHome"><p>もどる</p></a>
+    <video src="network_-_45961 (720p).mp4" class="movie" autoplay="" muted="" loop="" id="background-video">
+        <p>お使いのブラウザには、動画の再生に対応していません。</p>
+    </video>
+    <section>
+        <div class="cover"></div>
+    </section>
+
+    <section class="ex3">
+        <div class="title">
+            <h1>03</h1>
+            <h1>作った映像</h1>
+        </div>
+        <p>クリック（もしくはタップ）すると動画が再生されます。</p>
+        <div class="exSkill">
+            <video src="AVAssetExportPreset1280x720.MP4" id="nimo">
+                <p>お使いのブラウザには、動画の再生に対応していません。</p>
+            </video>
+            <video src="AVAssetExportPreset1280x720 2.MP4" id="marigold">
+                <p>お使いのブラウザには、動画の再生に対応していません。</p>
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <h2>PortfoliSite</h2>
+        <p>©︎AIT All rights reserved</p>
+    </footer>
+
+    <script>
+        const nimoElement = document.getElementById("nimo");
+        nimoElement.addEventListener("click", function() {
+        const videoElement = document.getElementById("nimo");
+            if (!videoElement.paused) {
+                videoElement.currentTime = 0;
+            }
+        videoElement.play();
+        });
+
+        const marigoldElement = document.getElementById("marigold");
+        marigoldElement.addEventListener("click", function() {
+        const videoElement = document.getElementById("marigold");
+            if (!videoElement.paused) {
+                videoElement.currentTime = 0;
+            }
+        videoElement.play();
+        });
+
+    </script>
+</body>
+</html>
