@@ -24,7 +24,7 @@
     border-bottom-color: rgba(255, 255, 255, 0.2);  /* 枠線の色をさりげなく指定 */
 }
 
-@media (width > 390px){
+@media (width > 768px){
     .cover{
         width: 1000px;
     }
@@ -39,7 +39,7 @@ section{
     width: 300px;
     margin: 30px auto;
 }
-@media (width > 390px){
+@media (width > 768px){
     section{
         width: 1000px;
         margin: 80px auto;
@@ -52,7 +52,7 @@ section{
     height: 450px;
     position: relative;
 }
-@media (width > 390px){
+@media (width > 768px){
     .hero {
         height: 550px;
     }
@@ -109,7 +109,7 @@ section{
     bottom: 100px;
 }
 
-@media (width > 390px){
+@media (width > 768px){
     .studentName{
         font-size: 45pt;
     }
@@ -122,7 +122,7 @@ section{
     bottom: 50px;
 }
 
-@media (width > 390px){
+@media (width > 768px){
     .studentInfo{
         font-size: 23pt;
     }
@@ -185,13 +185,13 @@ section{
     transform: rotate(90deg);
     right: -21%;
 }
-@media (width <= 390px){
+@media (width <= 768px){
     .skillContentsPC{
         display: none;
     }
 }
 
-@media (width > 390px){
+@media (width > 768px){
     .skillContents{
         display: none;
     }
@@ -326,7 +326,7 @@ section{
     margin-left: 8px;
 }
 
-@media (width > 390px){
+@media (width > 768px){
     .ex1 img, .ex2 img, .ex3 img, .ex4 img{
         width: 45%;
         margin-right: 40px;
@@ -334,7 +334,7 @@ section{
     }
 }
 
-@media (width > 390px){
+@media (width > 768px){
     .exSkill{
         display: flex;
     }
