@@ -334,8 +334,8 @@ section{
 
 .ex3 a{
     position: absolute;
-    left: 38%;
-    top: 324%;
+    left: 100px;
+    top: 2100px;
     text-decoration: none;
 }
 
@@ -354,8 +354,8 @@ section{
 @media (min-width:768px){
     .ex3 a{
         position: absolute;
-        left: 23.5%;
-        top: 334%;
+        left: 340px;
+        top: 2460px;
         text-decoration: none;
     }
 
