@@ -97,22 +97,6 @@ section{
     position: relative;
 }
 
-.videoContents .videoContentsMain1 img{
-    width: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-}
-
-.videoContents .videoContentsMain2 img{
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    z-index: -1;
-}
-
 @media (min-width:768px){
     .videoContents .videoContentsMain1 img, .videoContents .videoContentsMain2 img{
         display: none;
@@ -129,6 +113,22 @@ section{
         width: 100%;
     }
 }
+.videoContents .videoContentsMain1 img{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.videoContents .videoContentsMain2 img{
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
 
 .lang, .active{
     font-size: 15pt;
