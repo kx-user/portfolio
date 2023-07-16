@@ -308,6 +308,9 @@ section{
 }
 
 /*スキルの詳細*/
+.imageContents{
+    position: relative;
+}
 
 .ex1, .ex2, .ex3, .ex4{
     display: flex;
@@ -348,12 +351,6 @@ section{
         width: 87.5%;
         margin-left: 12px;
     }
-}
-
-.imageContents{
-    position: relative;
-    margin: 0;
-    padding: 0;
 }
 
 
