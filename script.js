@@ -41,16 +41,20 @@ targetPCskill4.style.bottom = '40%';
 targetPCskill4.style.right = '30%';
 
 const targetEx1 =  document.querySelector('.ex1');
-targetEx1.style.opacity = '50%'; 
+targetEx1.style.opacity = '30%';
+targetEx1.style.transform = 'translate(-10%,0)';
 
 const targetEx2 =  document.querySelector('.ex2');
-targetEx2.style.opacity = '50%'; 
+targetEx2.style.opacity = '30%'; 
+targetEx2.style.transform = 'translate(10%,0)';
 
 const targetEx3 =  document.querySelector('.ex3');
-targetEx3.style.opacity = '50%'; 
+targetEx3.style.opacity = '30%'; 
+targetEx3.style.transform = 'translate(-10%,0)';
 
 const targetEx4 =  document.querySelector('.ex4');
-targetEx4.style.opacity = '50%'; 
+targetEx4.style.opacity = '30%'; 
+targetEx4.style.transform = 'translate(10%,0)';
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -105,23 +109,27 @@ function skill4Change(targetPCskill4){
 }
 
 function ex1Change(targetEx1){
-    targetEx1.style.transition = 'opacity 1.2s ease';
+    targetEx1.style.transition = 'opacity 1.2s ease, transform 0.3s ease';
     targetEx1.style.opacity = '100%'; 
+    targetEx1.style.transform = 'translate(0%,0%)'; 
 }
 
 function ex2Change(targetEx2){
-    targetEx2.style.transition = 'opacity 1.2s ease';
+    targetEx2.style.transition = 'opacity 1.2s ease, transform 0.4s ease';
     targetEx2.style.opacity = '100%'; 
+    targetEx2.style.transform = 'translate(0%,0%)'; 
 }
 
 function ex3Change(targetEx3){
-    targetEx3.style.transition = 'opacity 1.2s ease';
+    targetEx3.style.transition = 'opacity 1.2s ease, transform 0.5s ease';
     targetEx3.style.opacity = '100%'; 
+    targetEx3.style.transform = 'translate(0%,0%)'; 
 }
 
 function ex4Change(targetEx4){
-    targetEx4.style.transition = 'opacity 1.2s ease';
+    targetEx4.style.transition = 'opacity 1.2s ease, transform 0.6s ease';
     targetEx4.style.opacity = '100%'; 
+    targetEx4.style.transform = 'translate(0%,0%)'; 
 }
 
 function skillChange(skillMenu){  //skillMenuの数を基準として画像を変更する
