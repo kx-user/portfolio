@@ -40,6 +40,18 @@ targetPCskill4.style.opacity = '50%';
 targetPCskill4.style.bottom = '40%';
 targetPCskill4.style.right = '30%';
 
+const targetEx1 =  document.querySelector('.ex1');
+targetEx1.style.opacity = '50%'; 
+
+const targetEx2 =  document.querySelector('.ex2');
+targetEx2.style.opacity = '50%'; 
+
+const targetEx3 =  document.querySelector('.ex3');
+targetEx3.style.opacity = '50%'; 
+
+const targetEx4 =  document.querySelector('.ex4');
+targetEx4.style.opacity = '50%'; 
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -47,6 +59,10 @@ targetPCskill4.style.right = '30%';
             skill2Change(targetPCskill2);
             skill3Change(targetPCskill3);
             skill4Change(targetPCskill4);
+            ex1Change(targetEx1);
+            ex2Change(targetEx2);
+            ex3Change(targetEx3);
+            ex4Change(targetEx4);
         }
       });
     });
@@ -54,6 +70,10 @@ targetPCskill4.style.right = '30%';
     observer.observe(targetPCskill2);
     observer.observe(targetPCskill3);
     observer.observe(targetPCskill4);
+    observer.observe(targetEx1);
+    observer.observe(targetEx2);
+    observer.observe(targetEx3);
+    observer.observe(targetEx4);
 });
 
 function skill1Change(targetPCskill1){
@@ -82,6 +102,26 @@ function skill4Change(targetPCskill4){
     targetPCskill4.style.opacity = '100%'; 
     targetPCskill4.style.bottom = '0%'; 
     targetPCskill4.style.right = '0%'; 
+}
+
+function ex1Change(targetEx1){
+    targetEx1.style.transition = 'opacity 1.2s ease';
+    targetEx1.style.opacity = '100%'; 
+}
+
+function ex2Change(targetEx2){
+    targetEx2.style.transition = 'opacity 1.2s ease';
+    targetEx2.style.opacity = '100%'; 
+}
+
+function ex3Change(targetEx3){
+    targetEx3.style.transition = 'opacity 1.2s ease';
+    targetEx3.style.opacity = '100%'; 
+}
+
+function ex4Change(targetEx4){
+    targetEx4.style.transition = 'opacity 1.2s ease';
+    targetEx4.style.opacity = '100%'; 
 }
 
 function skillChange(skillMenu){  //skillMenuの数を基準として画像を変更する

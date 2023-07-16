@@ -41,6 +41,7 @@ section{
     width: 300px;
     margin: 30px auto;
 }
+
 @media (min-width:768px){
     section{
         width: 1000px;
