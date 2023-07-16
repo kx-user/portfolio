@@ -61,6 +61,7 @@ section{
     width: 300px;
     margin: 30px auto;
 }
+
 @media (min-width:768px){
     section{
         width: 1000px;
@@ -79,6 +80,23 @@ section{
     margin: 0 auto;
 }
 
+.videoContents .videoContentsMain1 img{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.videoContents .videoContentsMain2 img{
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+
 .title{
     margin-top: 50px;
     display: flex;
@@ -89,6 +107,7 @@ section{
         margin-top: 0;
     }
 }
+
 .title > h1{
     margin-right: 10px;
 }
@@ -113,21 +132,7 @@ section{
         width: 100%;
     }
 }
-.videoContents .videoContentsMain1 img{
-    width: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-}
 
-.videoContents .videoContentsMain2 img{
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    z-index: -1;
-}
 
 
 .lang, .active{
