@@ -24,12 +24,25 @@
         </div>
         <p>クリック（もしくはタップ）すると動画が再生されます。</p>
         <div class="exSkill">
-            <video src="CGnimoVideo.mp4" id="nimo">
-                <p>お使いのブラウザには、動画の再生に対応していません。</p>
-            </video>
-            <video src="marigoldMV.MP4" id="marigold">
-                <p>お使いのブラウザには、動画の再生に対応していません。</p>
-            </video>
+            <div class="videoContents">
+                <div class="videoContentsMain1">
+                    <video src="CGnimoVideo.mp4" id="nimo">
+                        <p>お使いのブラウザには、動画の再生に対応していません。</p>
+                    </video>
+                    <img src="CGnimoVideoPre.png" alt="プレビュー">
+                </div>
+                <p>静かに泳ぐ魚たちを、Mayaを用いて表現しました。また、PremierePro、AfterEffects、AviUtlを用いて、ライトリークを追加したり、モーショングラフィックスを追加したりなど、細部までこだわりました。</p>
+            </div>
+            <div class="videoContents">
+                <div class="videoContentsMain2">
+                    <video src="marigoldMV.MP4" id="marigold">
+                        <p>お使いのブラウザには、動画の再生に対応していません。</p>
+                    </video>
+                    <img src="marigoldMVpre.png" alt="プレビュー">
+                </div>
+                
+                <p>Deemoという音楽ゲームの「Marigold」の文字PVを作成しました。映像はAviUtlで基盤を作っています。</p>
+            </div>
         </div>
     </section>
 
@@ -42,6 +55,7 @@
         const nimoElement = document.getElementById("nimo");
         nimoElement.addEventListener("click", function() {
         const videoElement = document.getElementById("nimo");
+        deleteImg1();
             if (!videoElement.paused) {
                 videoElement.currentTime = 0;
             }
@@ -51,12 +65,31 @@
         const marigoldElement = document.getElementById("marigold");
         marigoldElement.addEventListener("click", function() {
         const videoElement = document.getElementById("marigold");
+        deleteImg2();
             if (!videoElement.paused) {
                 videoElement.currentTime = 0;
             }
         videoElement.play();
         });
 
+        function deleteImg1(){
+            let videoContentsMain = document.querySelector('.videoContentsMain1');
+            let imgTags = videoContentsMain.querySelectorAll('img');
+            deleteImg(imgTags);
+        }
+
+        function deleteImg2(){
+            let videoContentsMain = document.querySelector('.videoContentsMain2');
+            let imgTags = videoContentsMain.querySelectorAll('img');
+            deleteImg(imgTags);
+            
+        }
+
+        function deleteImg(imgTags){
+            for (let i = 0; i < imgTags.length; i++) {
+            imgTags[i].remove();
+            }
+        }
     </script>
 </body>
 </html>

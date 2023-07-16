@@ -3,6 +3,7 @@
     top: 0;
     left: -2px;
     text-decoration: none;
+    z-index: 3;
 }
 
 .backHome p{
@@ -74,27 +75,15 @@ section{
 }
 
 .exSkill{
-    width: 100%;
-    
-}
-
-@media (max-width:769px){
-    .exSkill{
-        flex-direction: column;
-        
-    }
-}
-@media (min-width:768px){
-    .exSkill{
-        display: flex;
-        justify-content: space-between;
-    }
+    width: 90%;
+    margin: 0 auto;
 }
 
 .title{
     margin-top: 50px;
     display: flex;
 }
+
 @media (min-width:768px){
     .title{
         margin-top: 0;
@@ -104,15 +93,38 @@ section{
     margin-right: 10px;
 }
 
+.videoContentsMain1, .videoContentsMain2{
+    position: relative;
+}
+
+.videoContents .videoContentsMain1 img{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.videoContents .videoContentsMain2 img{
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: -1;
+}
+@media (min-width:768px){
+    img{
+        
+    }
+}
 #nimo, #marigold{
     width: 100%;
     margin: 10px 5px;
 }
 
 @media (min-width:768px){
-    #nimo, #marigold{
-        width: 45%;
-        margin:0 10px;
+    #nimo, #marigold, .videoContents{
+        width: 100%;
     }
 }
 
