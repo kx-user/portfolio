@@ -113,6 +113,12 @@ section{
     z-index: -1;
 }
 
+@media (min-width:768px){
+    .videoContents .videoContentsMain1 img, .videoContents .videoContentsMain2 img{
+        display: none;
+    }
+}
+
 #nimo, #marigold{
     width: 100%;
     margin: 10px 5px;
