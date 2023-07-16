@@ -338,6 +338,11 @@ section{
     margin-left: 8px;
 }
 
+.ex3 .exSkill .imageContents img{
+    width: 85%;
+    margin-left: 8px;
+}
+
 @media (min-width:768px){
     .ex2 img, .ex4 img{
         order: 2;
@@ -358,7 +363,13 @@ section{
 }
 
 .ex3 a{
-    transform: translate(-58%,0);
+    transform: translate(-50%,0);
+}
+
+@media (min-width:768px){
+    .ex3 a{
+        transform: translate(-58%,0);
+    }
 }
 
 .ex3 a p, .ex4 a p{
@@ -369,17 +380,18 @@ section{
     background-color: skyblue;
     padding: 2px 18px;
     text-align: center;
+    width: 180px;
     border-radius: 50px;
     border: solid black;
 }
 
-@media (min-width:768px){
-    .imageContents{
-        position: relative;
-        margin: 0;
-        padding: 0;
-    }
+.imageContents{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
 
+@media (min-width:768px){
     .ex3 a p:hover, .ex4 a p:hover{
         transform: scale(1.02);
     }
