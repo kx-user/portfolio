@@ -112,11 +112,7 @@ section{
     left: 0%;
     z-index: -1;
 }
-@media (min-width:768px){
-    img{
-        
-    }
-}
+
 #nimo, #marigold{
     width: 100%;
     margin: 10px 5px;
