@@ -59,10 +59,7 @@ targetEx4.style.transform = 'translate(10%,0)';
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            skill1Change(targetPCskill1);
-            skill2Change(targetPCskill2);
-            skill3Change(targetPCskill3);
-            skill4Change(targetPCskill4);
+            skillsOpen(targetPCskill1,targetPCskill2,targetPCskill3,targetPCskill4);
             ex1Change(targetEx1);
             ex2Change(targetEx2);
             ex3Change(targetEx3);
@@ -107,6 +104,13 @@ function skill4Change(targetPCskill4){
     targetPCskill4.style.bottom = '0%'; 
     targetPCskill4.style.right = '0%'; 
 }
+function skillsOpen(targetPCskill1,targetPCskill2,targetPCskill3,targetPCskill4){
+    skill1Change(targetPCskill1);
+    skill2Change(targetPCskill2);
+    skill3Change(targetPCskill3);
+    skill4Change(targetPCskill4);
+}
+
 
 function ex1Change(targetEx1){
     targetEx1.style.transition = 'opacity 1.2s ease, transform 0.3s ease';
@@ -208,7 +212,6 @@ function srcollAuto(element){  //element（ここではクラス）に基づい�
       const timeElapsed = currentTime - startTime;
       const scrollPosition = easeInOutQuad(timeElapsed, start, elementPosition - start, duration);
       window.scrollTo(0, scrollPosition);
-  
       if (timeElapsed < duration) {
         requestAnimationFrame(scroll);
       }
