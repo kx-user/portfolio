@@ -338,10 +338,6 @@ section{
     margin-left: 8px;
 }
 
-.ex3 .exSkill .imageContents img{
-    width: 85%;
-    margin-left: 8px;
-}
 
 @media (min-width:768px){
     .ex2 img, .ex4 img{
@@ -353,6 +349,13 @@ section{
         margin-left: 12px;
     }
 }
+
+.imageContents{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
 
 .ex3 a, .ex4 a{
     position: absolute;
@@ -383,12 +386,6 @@ section{
     width: 180px;
     border-radius: 50px;
     border: solid black;
-}
-
-.imageContents{
-    position: relative;
-    margin: 0;
-    padding: 0;
 }
 
 @media (min-width:768px){
