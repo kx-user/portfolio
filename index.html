@@ -41,9 +41,12 @@
     <section class="skills">
         <div class="skillTitle">スキル</div>
         <div class="skillContents">
-            <h1 class="number">01</h1>
-            <img src="skill01.png" alt="" id="imgID">
-            <p onclick="mobileGo()">もっと詳しく</p>
+            <div class="skillContentsMain">
+                <h1 class="number">01</h1>
+                <h2 class="skillCategory">プログラミング</h2>
+                <img src="skill01.png" alt="" id="imgID">
+                <p onclick="mobileGo()">もっと詳しく</p>
+            </div>
             <div class="triangle1" onclick="nextSkill()"></div>
             <div class="triangle2" onclick="backSkill()"></div>
         </div>
@@ -64,14 +67,14 @@
 
             <div class="PCskill3">
                 <h1 class="number">03</h1>
-                <h2>映像制作</h2>
+                <h2>映像製作</h2>
                 <img src="skill03.png" alt="" id="imgID">
                 <p onclick="go3()">もっと詳しく</p>
             </div>
 
             <div class="PCskill4">
                 <h1 class="number">04</h1>
-                <h2>音楽制作</h2>
+                <h2>音楽製作</h2>
                 <img src="skill04.png" alt="" id="imgID">
                 <p onclick="go4()">もっと詳しく</p>
             </div>
@@ -109,7 +112,10 @@
             <h1>Webデザイン</h1>
         </div>
         <div class="exSkill">
-            <img src="skill02.png" alt="Webデザインの画像">
+            
+                <img src="skill02.png" alt="Webデザインの画像">
+
+            
             <div class="skillMainContents">
                 <p class="skillText">　VS Codeを用いてWebデザインを行なっています。</p>
                 <p class="lang">　使用言語</p>
@@ -128,11 +134,13 @@
             <h1>映像制作</h1>
         </div>
         <div class="exSkill">
-            
-            <img src="skill03.png" alt="映像制作の画像"><a href="skill03.html"><p>映像作品を見る</p></a></img>
-            
-            
-            <div class="skillMainContents">
+            <div class="imageContents">
+                <img src="skill03.png" alt="映像制作の画像">
+                <a href="skill03.html"><p>映像作品を見る</p></a>
+            </div>
+                
+
+            <div class="skillMainContents3">
                 <p class="skillText">　2Dモーショングラフィックスから3DCGアニメーションまで、様々な映像制作を行なっています。また、そこで作った映像を編集することにより、更なる見栄えの向上を図ります。</p>
                 <p class="lang">　使用ソフト</p>
                 <ul>
@@ -150,7 +158,11 @@
             <h1>音楽制作</h1>
         </div>
         <div class="exSkill">
-            <img src="skill04.png" alt="作曲の画像">
+            <div class="imageContents">
+                <img src="skill04.png" alt="作曲の画像">
+                <a href="skill04.html"><p>作られた曲を聴く</p></a>
+            </div>
+                
             <div class="skillMainContents">
                 <p class="skillText">　DTM（デスクトップミュージック）が得意なので、よくパソコンで楽曲制作を行なっています。</p>
                 <p class="lang">　使用ソフト</p>

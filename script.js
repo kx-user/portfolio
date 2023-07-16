@@ -1,5 +1,6 @@
 let skillMenu = 8;
 let skillNumber = document.getElementsByClassName('number');
+let skillCategory = document.getElementsByClassName('skillCategory');
 
 
 window.addEventListener('load', function() {
@@ -87,16 +88,20 @@ function skillChange(skillMenu){  //skillMenuの数を基準として画像を�
     let imgTag = document.getElementById("imgID");
     if(skillMenu%4 == 1){
         skillNumber[0].textContent = '02';
+        skillCategory[0].textContent = 'Webデザイン';
         imgTag.src = 'skill02.png';
     }else if(skillMenu%4 == 2){
         skillNumber[0].textContent = '03';
+        skillCategory[0].textContent = '映像製作';
         imgTag.src = 'skill03.png';
     }else if(skillMenu%4 == 3){
         skillNumber[0].textContent = '04';
+        skillCategory[0].textContent = '楽曲製作';
         imgTag.src = 'skill04.png';
     }else{
         skillNumber[0].textContent = '01';
         imgTag.src = 'skill01.png';
+        skillCategory[0].textContent = 'プログラミング';
     }
 }
 

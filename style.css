@@ -248,7 +248,7 @@ section{
     transform: scale(1.25);
 }
 
-.PCskill1 h2, .PCskill2 h2, .PCskill3 h2, .PCskill4 h2{
+.PCskill1 h2, .PCskill2 h2, .PCskill3 h2, .PCskill4 h2, .skillContentsMain h2{
     position: absolute;
     top: -16%;
     right: -10%;
@@ -318,28 +318,50 @@ section{
 
 .title{
     display: flex;
+
+}
+
+@media (min-width:768px){
+    .exSkill{
+        display: flex;
+        flex-direction: row;
+        
+    }
 }
 
 .title > h1{
     margin-right: 10px;
 }
 
-
-
-
-.ex1 img, .ex2 img, .ex3 img, .ex4 img{
+.ex1 img, .ex2 img, .ex3 .exSkill .imageContents img, .ex4 img{
     width: 95%;
     margin-left: 8px;
 }
 
-.ex3 a{
+@media (min-width:768px){
+    .ex2 img, .ex4 img{
+        order: 2;
+    }
+
+    .ex3 .exSkill .imageContents img{
+        width: 87.5%;
+        margin-left: 12px;
+    }
+}
+
+.ex3 a, .ex4 a{
     position: absolute;
-    left: 100px;
-    top: 2100px;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,0);
     text-decoration: none;
 }
 
-.ex3 a p{
+.ex3 a{
+    transform: translate(-58%,0);
+}
+
+.ex3 a p, .ex4 a p{
     z-index: 3;
     color: black;
     font-weight: bold;
@@ -352,35 +374,35 @@ section{
 }
 
 @media (min-width:768px){
-    .ex3 a{
-        position: absolute;
-        left: 340px;
-        top: 2460px;
-        text-decoration: none;
+    .imageContents{
+        position: relative;
+        margin: 0;
+        padding: 0;
     }
 
-    .ex3 a p{
-        z-index: 3;
-        color: black;
-        font-weight: bold;
-        font-size: 18pt;
-        background-color: skyblue;
-        padding: 2px 28px;
-        text-align: center;
-        border-radius: 50px;
-        border: solid black;
-    }
-
-    .ex3 a p:hover{
+    .ex3 a p:hover, .ex4 a p:hover{
         transform: scale(1.02);
     }
 }
 
 @media (min-width:768px){
-    .ex1 img, .ex2 img, .ex3 img, .ex4 img{
+    .ex1 img, .ex3 img{
         width: 45%;
         margin-right: 40px;
         margin-left: 12px;
+    }
+
+    .ex2 img{
+        width: 45%;
+        order: 2;
+        margin-left: 40px;
+        margin-right: 12px;
+    }
+
+    .ex4 .exSkill .imageContents{
+        margin-left: 40px;
+        order: 2;
+        width: 85%;
     }
 }
 
