@@ -53,6 +53,25 @@
     </footer>
 
     <script>
+
+        function deleteImg(imgTags){
+            for (let i = 0; i < imgTags.length; i++) {
+            imgTags[i].remove();
+            }
+        }
+        function deleteImg1(){
+            let videoContentsMain = document.querySelector('.videoContentsMain1');
+            let imgTags = videoContentsMain.querySelectorAll('img');
+            deleteImg(imgTags);
+        }
+
+        function deleteImg2(){
+            let videoContentsMain = document.querySelector('.videoContentsMain2');
+            let imgTags = videoContentsMain.querySelectorAll('img');
+            deleteImg(imgTags);
+            
+        }
+        
         const nimoElement = document.getElementById("nimo");
         nimoElement.addEventListener("click", function() {
         const videoElement = document.getElementById("nimo");
@@ -73,24 +92,6 @@
         videoElement.play();
         });
 
-        function deleteImg1(){
-            let videoContentsMain = document.querySelector('.videoContentsMain1');
-            let imgTags = videoContentsMain.querySelectorAll('img');
-            deleteImg(imgTags);
-        }
-
-        function deleteImg2(){
-            let videoContentsMain = document.querySelector('.videoContentsMain2');
-            let imgTags = videoContentsMain.querySelectorAll('img');
-            deleteImg(imgTags);
-            
-        }
-        
-        function deleteImg(imgTags){
-            for (let i = 0; i < imgTags.length; i++) {
-            imgTags[i].remove();
-            }
-        }
     </script>
 </body>
 </html>
