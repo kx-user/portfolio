@@ -16,7 +16,11 @@ window.addEventListener('load', function() {
     } else if (agent.indexOf("safari") != -1) {
         console.log("ブラウザはsafariです。")
         coverElement.style.backgroundColor = 'white';
-        coverElement.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))'
+        coverElement.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))';
+        const imgElement1 = document.querySelector('.videoContents .videoContentsMain2 img');
+        imgElement1.style.opacity = '100%';
+        const imgElement2 = document.querySelector('.videoContents .videoContentsMain1 img');
+        imgElement2.style.opacity = '100%';
     }
 });
 
