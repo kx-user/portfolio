@@ -3,6 +3,8 @@ let skillNumber = document.getElementsByClassName('number');
 let skillCategory = document.getElementsByClassName('skillCategory');
 
 
+
+
 window.addEventListener('load', function() {
     const agent = window.navigator.userAgent.toLowerCase()
 
@@ -77,6 +79,12 @@ targetEx4.style.transform = 'translate(10%,0)';
     observer.observe(targetEx4);
 });
 
+
+
+
+
+
+
 function skill1Change(targetPCskill1){
     targetPCskill1.style.transition = 'opacity 0.2s ease, top 0.2s ease, left 0.2s ease, transform 0.2s ease';
     targetPCskill1.style.opacity = '100%'; 
@@ -136,33 +144,62 @@ function ex4Change(targetEx4){
     targetEx4.style.transform = 'translate(0%,0%)'; 
 }
 
-function skillChange(skillMenu){  //skillMenuの数を基準として画像を変更する
-    let imgTag = document.getElementById("imgID");
-    if(skillMenu%4 == 1){
-        skillNumber[0].textContent = '02';
-        skillCategory[0].textContent = 'Webデザイン';
-        imgTag.src = 'skill02.png';
-    }else if(skillMenu%4 == 2){
-        skillNumber[0].textContent = '03';
-        skillCategory[0].textContent = '映像製作';
-        imgTag.src = 'skill03.png';
-    }else if(skillMenu%4 == 3){
-        skillNumber[0].textContent = '04';
-        skillCategory[0].textContent = '楽曲製作';
-        imgTag.src = 'skill04.png';
-    }else{
-        skillNumber[0].textContent = '01';
-        imgTag.src = 'skill01.png';
-        skillCategory[0].textContent = 'プログラミング';
-    }
+function fadeChange(targetSkillCategory,targetSkillImg,skillMenu,imgTag){//画像と文字列をなだらかに変化させる
+    targetSkillCategory.style.opacity = 0; // 一時的に透明にする
+    targetSkillImg.style.opacity = 0; // 一時的に透明にする
+    setTimeout(function() {
+        if (skillMenu % 4 == 1) {
+            skillCategory[0].textContent = 'Webデザイン';
+            imgTag.src = 'skill02.png';
+        } else if (skillMenu % 4 == 2) {
+            skillCategory[0].textContent = '映像製作';
+            imgTag.src = 'skill03.png';
+        } else if (skillMenu % 4 == 3) {
+            skillCategory[0].textContent = '楽曲製作';
+            imgTag.src = 'skill04.png';
+        } else {
+            skillCategory[0].textContent = 'プログラミング';
+            imgTag.src = 'skill01.png';
+        }
+        targetSkillCategory.style.opacity = 1; // 0.2秒後に不透明にする
+        targetSkillImg.style.opacity = 1; // 0.2秒後に不透明にする
+
+      }, 200);
 }
 
-function backSkill(){
+function skillChange(skillMenu) {//モバイル版の画像を変える大元の関数
+    let imgTag = document.getElementById("imgID");
+    let targetSkillCategory = document.querySelector('.skillCategory');
+    let targetSkillImg = document.querySelector('.skillContents img');
+    if (skillMenu % 4 == 1) {
+        skillNumber[0].textContent = '02';
+    } else if (skillMenu % 4 == 2) {
+        skillNumber[0].textContent = '03';
+    } else if (skillMenu % 4 == 3) {
+        skillNumber[0].textContent = '04';
+    } else {
+        skillNumber[0].textContent = '01';
+    }
+    fadeChange(targetSkillCategory,targetSkillImg,skillMenu,imgTag);//画像と文字をなだらかに変えるやつ
+}
+  
+function sideButtonColorChange(targetBackButton){
+    targetBackButton.style.borderBottom = '30px solid red';
+    setTimeout(function() {
+        targetBackButton.style.borderBottom = '30px solid black'; // ボタンの色を元に戻す
+    }, 10);
+}
+
+function nextSkill(){
+    const targetBackButton = document.querySelector('.triangle2');
+    sideButtonColorChange(targetBackButton);
     skillMenu++;
     skillChange(skillMenu);//画像を変更する
 }
 
-function nextSkill(){
+function backSkill(){
+    const targetBackButton = document.querySelector('.triangle1');
+    sideButtonColorChange(targetBackButton);
     skillMenu--;
     skillChange(skillMenu);//画像を変更する
 }
@@ -226,12 +263,3 @@ function srcollAuto(element){  //element（ここではクラス）に基づい�
   
     scroll();
 }
-
-
-
-
-
-
-
-
-
