@@ -2,15 +2,12 @@ let skillMenu = 8;
 let skillNumber = document.getElementsByClassName('number');
 let skillCategory = document.getElementsByClassName('skillCategory');
 
-
-
-
 window.addEventListener('load', function() {
     const agent = window.navigator.userAgent.toLowerCase()
 
     if (agent.indexOf("chrome") != -1) {
         const coverElement = document.querySelector('.cover');
-        console.log("ブラウザはchromeです。")
+        console.log("ブラウザはchromeです。");
         coverElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         coverElement.style.backdropFilter = 'blur(10px)';
         const imgElement1 = document.querySelector('.videoContents .videoContentsMain1 img');
@@ -18,7 +15,11 @@ window.addEventListener('load', function() {
         const imgElement2 = document.querySelector('.videoContents .videoContentsMain2 img');
         imgElement2.style.opacity = '0%';
     } else if (agent.indexOf("safari") != -1) {
-        console.log("ブラウザはsafariです。")
+        console.log("ブラウザはsafariです。");
+        const imgElement1 = document.querySelector('.videoContents .videoContentsMain1 img');
+        imgElement1.style.opacity = '100%';
+        const imgElement2 = document.querySelector('.videoContents .videoContentsMain2 img');
+        imgElement2.style.opacity = '100%';
         coverElement.style.backgroundColor = 'white';
         coverElement.style.background = 'linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))';
     }
