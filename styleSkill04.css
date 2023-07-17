@@ -120,6 +120,10 @@ iframe{
     margin: 0 12px;
 }
 
+.ex4 p{
+    width: 90%;
+}
+
 footer{
     background-color: black;
     padding: 40px 0;
