@@ -1,4 +1,4 @@
-let skillMenu = 8;
+let skillMenu = 8888;
 let skillNumber = document.getElementsByClassName('number');
 let skillCategory = document.getElementsByClassName('skillCategory');
 
@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
         const coverElement = document.querySelector('.cover');
         console.log("ブラウザはchromeです。");
         coverElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-        coverElement.style.backdropFilter = 'blur(10px)';
+        coverElement.style.backdropFilter = 'blur(20px)';
         const imgElement1 = document.querySelector('.videoContents .videoContentsMain1 img');
         imgElement1.style.opacity = '0%';
         const imgElement2 = document.querySelector('.videoContents .videoContentsMain2 img');

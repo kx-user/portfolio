@@ -31,6 +31,7 @@
                         <p>お使いのブラウザには、動画の再生に対応していません。</p>
                     </video>
                     <img src="CGnimoVideoPre.png" alt="プレビュー" id="nimo">
+                    <p onclick="nimoStart()" class="coverText">クリックして再生</p>
                 </div>
                 <p>静かに泳ぐ魚たちを、Mayaを用いて表現しました。また、PremierePro、AfterEffects、AviUtlを用いて、ライトリークを追加したり、モーショングラフィックスを追加したりなど、細部までこだわりました。</p>
             </div>
@@ -40,6 +41,7 @@
                         <p>お使いのブラウザには、動画の再生に対応していません。</p>
                     </video>
                     <img src="marigoldMVpre.png" alt="プレビュー" id="marigold">
+                    <p onclick="marigoldStart()" class="coverText">クリックして再生</p>
                 </div>
                 
                 <p>Deemoという音楽ゲームの「Marigold」の文字PVを作成しました。映像はAviUtlで基盤を作っています。</p>
@@ -53,6 +55,16 @@
     </footer>
 
     <script>
+        let textNimo = document.querySelector('.videoContentsMain1 .coverText');
+        let textMarigold = document.querySelector('.videoContentsMain2 .coverText');
+
+        function textShow(element){
+            element.style.opacity = '100%';
+        }
+
+        function textHide(element){
+            element.style.opacity = '0%';
+        }
 
         function deleteImg(imgTags){
             for (let i = 0; i < imgTags.length; i++) {
@@ -72,26 +84,80 @@
             
         }
         
-        const nimoElement = document.getElementById("nimo");
-        nimoElement.addEventListener("click", function() {
-        const videoElement = document.getElementById("nimo");
-        deleteImg1();
-            if (!videoElement.paused) {
-                videoElement.currentTime = 0;
+        function nimoStart() {
+            let videoElementNimo = document.getElementById("nimo");
+            let videoElementMarigold = document.getElementById("marigold");
+
+            if (!videoElementMarigold.paused) {
+                videoElementMarigold.pause();
+                textShow(textMarigold);
             }
-        videoElement.play();
+
+            deleteImg1();
+
+            if (!videoElementNimo.paused) {
+                videoElementNimo.pause();
+                textShow(textNimo);
+            } else {
+                videoElementNimo.play();
+                textHide(textNimo);
+            }
+
+        }
+
+        function marigoldStart() {
+            let videoElementNimo = document.getElementById("nimo");
+            let videoElementMarigold = document.getElementById("marigold");
+            if (!videoElementNimo.paused) {
+                videoElementNimo.pause();
+                textShow(textNimo);
+            }
+            deleteImg1();
+            if (!videoElementMarigold.paused) {
+                videoElementMarigold.pause();
+                textShow(textMarigold);
+            } else {
+                videoElementMarigold.play();
+                textHide(textMarigold);
+            }
+        }
+
+        let nimoElement = document.getElementById("nimo");
+        nimoElement.addEventListener("click", function() {
+        let videoElement = document.getElementById("nimo");
+        let videoElementOther = document.getElementById("marigold");
+        deleteImg1();
+        if (!videoElementOther.paused) {
+            videoElementOther.pause();
+            textShow(textMarigold);
+        }
+        if (!videoElement.paused) {
+            videoElement.pause();
+            textShow(textNimo);
+        } else {
+            videoElement.play();
+            textHide(textNimo);
+        }
         });
         
         const marigoldElement = document.getElementById("marigold");
         marigoldElement.addEventListener("click", function() {
-        const videoElement = document.getElementById("marigold");
+        let videoElement = document.getElementById("marigold");
+        let videoElementOther = document.getElementById("nimo");
         deleteImg2();
-            if (!videoElement.paused) {
-                videoElement.currentTime = 0;
+            if (!videoElementOther.paused) {
+                videoElementOther.pause();
+                textShow(textNimo);
             }
-        videoElement.play();
+            if (!videoElement.paused) {
+                videoElement.pause();
+                textShow(textMarigold);
+            } else {
+                videoElement.play();
+                textHide(textMarigold);
+            }
         });
-
+        
     </script>
 </body>
 </html>

@@ -88,6 +88,22 @@ section{
     z-index: -1;
     opacity: 1;
 }
+.coverText{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 10pt;
+    font-weight: bold;
+    text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;/* 白と黒の縁取りと影を設定する */
+    opacity: 0;
+}
+@media (min-width:768px){
+    .coverText{
+        opacity: 1;
+        font-size: 20pt;
+    }
+}
 
 .videoContents .videoContentsMain2 img{
     width: 100%;
