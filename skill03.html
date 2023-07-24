@@ -10,6 +10,7 @@
 </head>
 <body>
     <script src="script.js"></script>
+
     <a href="index.html" class="backHome"><p>もどる</p></a>
     <video src="network_-_45961 (720p).mp4" class="movie" autoplay="" muted="" loop="" id="background-video">
         <p>お使いのブラウザには、動画の再生に対応していません。</p>
@@ -32,6 +33,7 @@
                     </video>
                     <img src="CGnimoVideoPre.png" alt="プレビュー" id="nimo">
                     <p onclick="nimoStart()" class="coverText">クリックして再生</p>
+                    <p class="backStart" onclick="backN()">最初から見る</p>
                 </div>
                 <p>静かに泳ぐ魚たちを、Mayaを用いて表現しました。また、PremierePro、AfterEffects、AviUtlを用いて、ライトリークを追加したり、モーショングラフィックスを追加したりなど、細部までこだわりました。</p>
             </div>
@@ -42,6 +44,7 @@
                     </video>
                     <img src="marigoldMVpre.png" alt="プレビュー" id="marigold">
                     <p onclick="marigoldStart()" class="coverText">クリックして再生</p>
+                    <p class="backStart" onclick="backM()">最初から見る</p>
                 </div>
                 
                 <p>Deemoという音楽ゲームの「Marigold」の文字PVを作成しました。映像はAviUtlで基盤を作っています。</p>
@@ -57,12 +60,16 @@
     <script>
         let textNimo = document.querySelector('.videoContentsMain1 .coverText');
         let textMarigold = document.querySelector('.videoContentsMain2 .coverText');
+        let backNimo = document.querySelector('.videoContentsMain1 .backStart');
+        let backMarigold = document.querySelector('.videoContentsMain2 .backStart');
+        let FlgNimo = 0;
+        let FlgMarigold = 0;
 
-        function textShow(element){
+        function Show(element){
             element.style.opacity = '100%';
         }
 
-        function textHide(element){
+        function Hide(element){
             element.style.opacity = '0%';
         }
 
@@ -83,25 +90,27 @@
             deleteImg(imgTags);
             
         }
-        
+
         function nimoStart() {
             let videoElementNimo = document.getElementById("nimo");
             let videoElementMarigold = document.getElementById("marigold");
 
             if (!videoElementMarigold.paused) {
                 videoElementMarigold.pause();
-                textShow(textMarigold);
+                Show(textMarigold);
             }
-
+    
             deleteImg1();
 
             if (!videoElementNimo.paused) {
                 videoElementNimo.pause();
-                textShow(textNimo);
+                Show(textNimo);
             } else {
                 videoElementNimo.play();
-                textHide(textNimo);
+                Hide(textNimo);
             }
+
+            Show(backNimo);
 
         }
 
@@ -110,18 +119,21 @@
             let videoElementMarigold = document.getElementById("marigold");
             if (!videoElementNimo.paused) {
                 videoElementNimo.pause();
-                textShow(textNimo);
+                Show(textNimo);
             }
+            
             deleteImg1();
             if (!videoElementMarigold.paused) {
                 videoElementMarigold.pause();
-                textShow(textMarigold);
+                Show(textMarigold);
             } else {
                 videoElementMarigold.play();
-                textHide(textMarigold);
+                Hide(textMarigold);
             }
-        }
 
+            Show(backMarigold);
+            
+        }
         let nimoElement = document.getElementById("nimo");
         nimoElement.addEventListener("click", function() {
         let videoElement = document.getElementById("nimo");
@@ -129,16 +141,22 @@
         deleteImg1();
         if (!videoElementOther.paused) {
             videoElementOther.pause();
-            textShow(textMarigold);
+            Show(textMarigold);
         }
+        
         if (!videoElement.paused) {
             videoElement.pause();
-            textShow(textNimo);
+            Show(textNimo);
         } else {
             videoElement.play();
-            textHide(textNimo);
+            Hide(textNimo);
         }
+
+        Show(backNimo);
+        
         });
+
+        
         
         const marigoldElement = document.getElementById("marigold");
         marigoldElement.addEventListener("click", function() {
@@ -147,17 +165,45 @@
         deleteImg2();
             if (!videoElementOther.paused) {
                 videoElementOther.pause();
-                textShow(textNimo);
+                Show(textNimo);
             }
+            
             if (!videoElement.paused) {
                 videoElement.pause();
-                textShow(textMarigold);
+                Show(textMarigold);
             } else {
                 videoElement.play();
-                textHide(textMarigold);
+                Hide(textMarigold);
             }
+            
+            Show(backMarigold);
         });
+
+        function backN()　{
+        const video = document.getElementById("nimo");
+        const videoOther = document.getElementById("marigold");
         
+        video.currentTime = 0;
+        
+        video.play();
+        if (!videoOther.paused) {
+            videoOther.pause();
+            Show(textMarigold);
+        }
+        }
+        
+        function backM()　{
+        const video = document.getElementById("marigold");
+        const videoOther = document.getElementById("nimo");
+        
+        video.currentTime = 0;
+        
+        video.play();
+        if (!videoOther.paused) {
+            videoOther.pause();
+            Show(textNimo);
+        }
+        }
     </script>
 </body>
 </html>
