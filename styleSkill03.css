@@ -97,6 +97,7 @@ section{
     font-weight: bold;
     text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;/* 白と黒の縁取りと影を設定する */
     opacity: 0;
+    z-index: 10;
 }
 @media (min-width:768px){
     .coverText{
