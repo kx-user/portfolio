@@ -268,3 +268,4 @@ function srcollAuto(element){  //element（ここではクラス）に基づい�
   
     scroll();
 }
+　
